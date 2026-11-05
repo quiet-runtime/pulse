@@ -1,34 +1,39 @@
-# PULSE privacy policy
+# PULSE privacy
 
-Effective from PULSE 1.0.0.
+Applies to PULSE 1.0.6. Updated 5 November 2026.
 
-PULSE shares the audio of a browser tab you choose into an X Space you are speaking in. It collects
-no personal data, and it has no servers.
+## Purpose
 
-**What PULSE reads.** On x.com and twitter.com PULSE runs inside the page, to find the Space's audio
-connection and to read whether you are on stage and whether X has your microphone muted. It does not
-read your posts, messages, account details or browsing.
+PULSE shares one browser tab's audio into an X Space where you are a host or speaker. An X account is required; PULSE has no separate account.
 
-**Audio.** The tab you pick in Chrome's own share dialog is sent over the connection X opened for your Space.
-Your microphone stays out of it unless you press the Voice key, and then it is mixed in, in your browser. PULSE sends them
-nowhere else, records nothing and keeps nothing. Once in a Space, people listening hear what you
-share, as they hear your voice; X's own terms and policies apply to that.
+## Access to X pages
 
-**The tab you share.** If you use the player keys or M, Chrome asks you once to let PULSE reach your tabs.
-With that, PULSE plays, pauses, moves, mutes and sets the volume of the audio or video player in the tab you
-share, and reads its position and length. It looks at which tabs are making sound to find that tab, and marks them for a moment when you start a Share, so that Chrome's capture can say which one you chose. It
-reads nothing else from them, and sends nothing anywhere. Say no and PULSE simply cannot control the
-player. You can remove the access in Chrome at any time.
+PULSE runs on x.com and twitter.com to display its panel, determine the Space and your stage/mute state, and connect shared audio to X's existing browser audio connection.
 
-**What PULSE keeps.** Your tab level, your Width setting, and where you left the
-panel, in your browser's extension storage on this device. Uninstalling PULSE removes them.
+## Audio
 
-**What PULSE sends.** Nothing to the developer or to any third party. No analytics, no advertising,
-no remote code.
+Chrome asks you to choose a source tab for each share. PULSE uses its audio track and stops the capture's video track. Your microphone is excluded from the shared mix until you enable Voice. Audio is sent through X's existing Space connection, not to a developer-operated audio server. PULSE does not record it. X's policies and any recording by X or other participants apply once audio is shared.
 
-**Your choices.** Chrome asks you to pick a tab each time, and shows that the tab is being shared.
-Press Stop, or close the tab, and X has your microphone again as if PULSE were not there.
+## Optional player access
 
-PULSE is not affiliated with or endorsed by X Corp.
+Player controls and M can request scripting permission and access to all sites. This permission is broader than the selected tab. PULSE inspects candidate audible tabs and their audio/video players to identify the source, and may mark candidate tabs using Chrome's Capture Handle API. It reads player state such as playback position, duration, volume and mute state, and can change playback, position, volume and mute. If the selected tab cannot be identified, a fallback can select another audible tab. You may decline optional access and still share audio; source-player controls will then be unavailable. Chrome's extension settings let you review or remove the access.
 
-Questions: contact the developer through the extension's Chrome Web Store page.
+## Local settings
+
+PULSE stores the tab level, Width setting and panel position in extension storage on this device. Uninstalling the extension removes those settings.
+
+## Developer data collection
+
+PULSE has no analytics or advertising endpoint and does not send audio, browsing history or telemetry to the developer. Audio shared into a Space still travels through X.
+
+## Stopping
+
+Stop ends the capture and restores X's microphone connection. A normal Stop with Voice off mutes X first. Crash or connection-stall recovery can return to X's normal microphone behavior.
+
+## Browser demo
+
+The website's PULSAR demo uses sample tracks, recorded sample voices and a simulated Space. It processes audio in the browser and can run an Opus loopback within the page. It does not sign in to X or broadcast to a live Space. Website assets are requested from the host serving the page; the host's normal request handling may apply.
+
+## Support
+
+For questions or problems, [open a GitHub issue](https://github.com/quiet-runtime/pulse/issues).

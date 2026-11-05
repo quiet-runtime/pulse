@@ -3,31 +3,23 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>PULSE privacy policy</title>
+<title>PULSE privacy</title>
 <meta name="color-scheme" content="dark">
 <link rel="icon" href="img/pulse-icon.png">
-<style>
-  body { margin: 0; background: #08070f; color: rgb(255 255 255 / .86); font: 17px/1.6 "Segoe UI Variable Display", "SF Pro Display", "Segoe UI", system-ui, sans-serif; }
-  main { width: min(680px, calc(100vw - 32px)); margin: 0 auto; padding-block: 48px 72px; }
-  h1 { color: #fff; font-size: clamp(32px, 6vw, 44px); line-height: 1.1; letter-spacing: -.02em; margin: 26px 0 22px; }
-  b { color: #fff; }
-  a { color: inherit; }
-</style>
+<style>body{margin:0;background:#080b12;color:#e5e8f0;font:16px/1.65 system-ui,sans-serif}main{width:min(760px,calc(100vw - 40px));margin:0 auto;padding:40px 0 72px}h1,h2{line-height:1.25}h2{margin-top:30px;font-size:1.2rem}a{color:#b0ceff}footer{margin-top:40px;border-top:1px solid #3b4350;padding-top:18px}</style>
 </head>
-<body>
-<main>
-<a href="./">← PULSE</a>
-<h1>PULSE privacy policy</h1>
-<p>Effective from PULSE 1.0.0.</p>
-<p>PULSE shares the audio of a browser tab you choose into an X Space you are speaking in. It collects no personal data, and it has no servers.</p>
-<p><b>What PULSE reads.</b> On x.com and twitter.com PULSE runs inside the page, to find the Space's audio connection and to read whether you are on stage and whether X has your microphone muted. It does not read your posts, messages, account details or browsing.</p>
-<p><b>Audio.</b> The tab you pick in Chrome's own share dialog is sent over the connection X opened for your Space. Your microphone stays out of it unless you press the Voice key, and then it is mixed in, in your browser. PULSE sends them nowhere else, records nothing and keeps nothing. Once in a Space, people listening hear what you share, as they hear your voice; X's own terms and policies apply to that.</p>
-<p><b>The tab you share.</b> If you use the player keys or M, Chrome asks you once to let PULSE reach your tabs. With that, PULSE plays, pauses, moves, mutes and sets the volume of the audio or video player in the tab you share, and reads its position and length. It looks at which tabs are making sound to find that tab, and marks them for a moment when you start a Share, so that Chrome's capture can say which one you chose. It reads nothing else from them, and sends nothing anywhere. Say no and PULSE simply cannot control the player. You can remove the access in Chrome at any time.</p>
-<p><b>What PULSE keeps.</b> Your tab level, your Width setting, and where you left the panel, in your browser's extension storage on this device. Uninstalling PULSE removes them.</p>
-<p><b>What PULSE sends.</b> Nothing to the developer or to any third party. No analytics, no advertising, no remote code.</p>
-<p><b>Your choices.</b> Chrome asks you to pick a tab each time, and shows that the tab is being shared. Press Stop, or close the tab, and X has your microphone again as if PULSE were not there.</p>
-<p>PULSE is not affiliated with or endorsed by X Corp.</p>
-<p>Questions: contact the developer through the extension's Chrome Web Store page.</p>
-</main>
-</body>
-</html>
+<body><main>
+<a href="./">PULSE</a>
+<h1>PULSE privacy</h1>
+<p>Applies to PULSE 1.0.6. Updated 5 November 2026.</p>
+<section><h2>Purpose</h2><p>PULSE shares one browser tab's audio into an X Space where you are a host or speaker. An X account is required; PULSE has no separate account.</p></section>
+<section><h2>Access to X pages</h2><p>PULSE runs on x.com and twitter.com to display its panel, determine the Space and your stage/mute state, and connect shared audio to X's existing browser audio connection.</p></section>
+<section><h2>Audio</h2><p>Chrome asks you to choose a source tab for each share. PULSE uses its audio track and stops the capture's video track. Your microphone is excluded from the shared mix until you enable Voice. Audio is sent through X's existing Space connection, not to a developer-operated audio server. PULSE does not record it. X's policies and any recording by X or other participants apply once audio is shared.</p></section>
+<section><h2>Optional player access</h2><p>Player controls and M can request scripting permission and access to all sites. This permission is broader than the selected tab. PULSE inspects candidate audible tabs and their audio/video players to identify the source, and may mark candidate tabs using Chrome's Capture Handle API. It reads player state such as playback position, duration, volume and mute state, and can change playback, position, volume and mute. If the selected tab cannot be identified, a fallback can select another audible tab. You may decline optional access and still share audio; source-player controls will then be unavailable. Chrome's extension settings let you review or remove the access.</p></section>
+<section><h2>Local settings</h2><p>PULSE stores the tab level, Width setting and panel position in extension storage on this device. Uninstalling the extension removes those settings.</p></section>
+<section><h2>Developer data collection</h2><p>PULSE has no analytics or advertising endpoint and does not send audio, browsing history or telemetry to the developer. Audio shared into a Space still travels through X.</p></section>
+<section><h2>Stopping</h2><p>Stop ends the capture and restores X's microphone connection. A normal Stop with Voice off mutes X first. Crash or connection-stall recovery can return to X's normal microphone behavior.</p></section>
+<section><h2>Browser demo</h2><p>The website's PULSAR demo uses sample tracks, recorded sample voices and a simulated Space. It processes audio in the browser and can run an Opus loopback within the page. It does not sign in to X or broadcast to a live Space. Website assets are requested from the host serving the page; the host's normal request handling may apply.</p></section>
+<section><h2>Support</h2><p>For questions or problems, <a href="https://github.com/quiet-runtime/pulse/issues">open a GitHub issue</a>.</p></section>
+<footer><a href="https://github.com/quiet-runtime/pulse/issues">Support</a> · <a href="LICENSE.md">Licence</a> · <a href="THIRD_PARTY_NOTICES.txt">Third-party notices</a></footer>
+</main></body></html>

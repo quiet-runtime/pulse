@@ -118,18 +118,18 @@ PULSE has no developer-operated audio server, analytics or separate account. It 
 
 | | **PULSE** | **PULSATE** | **PULSAR** |
 | --- | --- | --- | --- |
-| **Purpose** | One tab, one compact strip | Several sources in a browser mixer | A desktop console and Room view |
-| **Runs in** | Desktop Chrome | Chrome | Windows first; macOS planned |
-| **Controls** | Level, Width, Voice and compatible player controls | Channel processing, a built-in player and MIDI control | Turntables, channel processing, effects racks, MIDI and Space records |
+| **Purpose** | One tab, one compact strip | A multichannel mixer in a Chrome extension | A desktop console and Room view |
+| **Runs in** | Desktop Chrome extension | Desktop Chrome extension | Windows first; macOS planned |
+| **Controls** | Level, Width, Voice and compatible player controls | Channel processing and a built-in player | Turntables, channel processing, effects racks, MIDI and Space records |
 | **Availability** | **[Download 1.0.6](https://github.com/quiet-runtime/pulse/releases/tag/v1.0.6)** | **In development** | **In development** |
 
 ## PULSATE
 
 **More sources, with a channel strip for each.**
 
-PULSATE is a separate Chrome mixer in development. Its design brings several sources into one stereo mix for a Space, with trim, compression, EQ, filtering, effects sends, mute, solo and ducking.
+PULSATE is a separate **Chrome extension** in development, with a multichannel mixer for X Spaces. Its design brings several sources into one stereo mix for a Space, with trim, compression, EQ, filtering, effects sends, mute, solo and ducking.
 
-A built-in player, loudness controls, MIDI mapping, themes and interface scaling are part of the development build. Features may change before release. **PULSATE is not included in the PULSE download.**
+A built-in player, loudness controls, themes and interface scaling are part of the development build. **PULSATE does not support MIDI mapping.** Features may change before release. **PULSATE is not included in the PULSE download.**
 
 ## PULSAR
 

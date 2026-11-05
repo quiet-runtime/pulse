@@ -1,149 +1,224 @@
-<p align="center"><img src="img/pulsar-icon.png" width="96" height="96" alt=""></p>
+<p align="center">
+  <img src="img/readme/pulse-hero-v1.jpg" width="1200" alt="PULSE — Your tab. Your Space. Stereo tab audio for X Spaces, for desktop Chrome.">
+</p>
 
-<h1 align="center">PULSE · PULSATE · PULSAR</h1>
+<h1 align="center">PULSE for X Spaces</h1>
 
-<p align="center"><b>Full-band stereo for X Spaces.</b><br>
-From one strip in Chrome to a full console on Windows and macOS.</p>
+<p align="center"><b>Bring your tab to the conversation.</b><br>
+Share music, a video or a clip from one browser tab.<br>
+Your microphone joins the shared mix only when you choose.</p>
 
-<p align="center"><a href="../../releases/latest"><b>Download PULSE 1.0.6</b></a> · <a href="#pulsate">PULSATE</a> · <a href="#pulsar">PULSAR is coming to Windows and macOS</a></p>
+<p align="center">
+  <a href="https://github.com/quiet-runtime/pulse/releases/download/v1.0.6/pulse-1.0.6-chrome.zip"><b>Download PULSE 1.0.6</b></a>
+  &nbsp;·&nbsp; <a href="#install-pulse">Install</a>
+  &nbsp;·&nbsp; <a href="#permissions-and-privacy">Permissions &amp; privacy</a>
+  &nbsp;·&nbsp; <a href="https://github.com/quiet-runtime/pulse/issues">Support</a>
+</p>
+
+<p align="center"><b>Available now · Free to use · Desktop Chrome 120+</b><br>
+<sub>PULSE is the extension in this download. PULSATE and PULSAR are separate products in development.</sub></p>
+
+## One strip. One tab.
+
+PULSE gives hosts and speakers a compact audio strip over X. Choose a tab, set its level, and share its sound through your Space's existing audio connection.
 
 <table>
 <tr>
-<th width="24%">PULSE</th>
-<th width="26%">PULSATE</th>
-<th width="50%">PULSAR</th>
-</tr>
-<tr>
-<td align="center"><a href="#pulse"><img src="img/pulse-strip.png" alt="The PULSE strip, on air."></a></td>
-<td align="center"><b>Multichannel mixer</b><br>Channel strips<br>Built-in player<br>MIDI control</td>
-<td align="center"><a href="#pulsar"><img src="img/pulsar-desk.jpg" alt="PULSAR's Studio with two turntables."></a></td>
-</tr>
-<tr>
-<td>One strip, one tab, and your mic stays out unless you let it in.</td>
-<td>A multichannel mixer in Chrome, with a channel strip per source and a built-in player.</td>
-<td>The whole console on your computer, with your own Room view.</td>
-</tr>
-<tr>
-<td><b>Chrome</b><br>Version 1.0.6</td>
-<td><b>Chrome</b><br>In development</td>
-<td><b>Windows, macOS</b><br>Coming</td>
+<td width="30%" align="center" valign="top">
+<img src="img/pulse-strip.png" width="220" alt="PULSE interface with Voice off, stereo transmission status, position bar, level meter and fader, player buttons, M, Width and Stop."><br>
+<sub>The PULSE interface with sample media.</sub>
+</td>
+<td width="70%" valign="top">
+
+### Music and clips, right in the room
+
+- **Share one tab.** Chrome's own picker lets you choose the source.
+- **Set the level.** A fader controls the tab audio; the meter shows its signal after the fader.
+- **Shape the stereo.** Width narrows to mono at −100, leaves width unchanged at 0, and widens it above 0.
+- **Control compatible players.** Play/pause and a position bar live on the strip, with previous/next where the website supports them.
+- **Choose when to speak.** Voice starts off. Enable it when you want your microphone in the shared mix.
+- **Stop from the strip.** End the share and return the connection to X's microphone.
+
+</td>
 </tr>
 </table>
 
-The website in this repository runs the real PULSAR Studio in your browser: its Mixer, Turntables, Racks and audio engine, with AI-made sample music and voices.
+PULSE supports stereo transmission. What listeners receive also depends on X's connection, servers and listening apps.
+
+<p align="center">
+<img src="img/readme/pulse-voice-v1.jpg" width="1200" alt="PULSE — Your voice. By choice. Tab audio first. Voice when you choose.">
+</p>
+
+### Your voice and X's mute
+
+**Voice** controls whether your microphone joins the shared mix. **M** silences the outgoing tab; with optional player access, it also mutes the source player.
+
+**X's own mute covers everything you send.** If you mute in X, or a host mutes you, the shared tab is silenced too. Unmute in X to send tab audio.
+
+A normal **Stop** with Voice off mutes X before restoring its microphone connection. If PULSE is interrupted by a crash or connection stall, recovery can return to X's normal microphone behavior.
+
+## Install PULSE
+
+You need **desktop Chrome 120 or later** and an X account with permission to speak in the Space. This release is an unpacked Chrome extension.
+
+1. Download [**pulse-1.0.6-chrome.zip**](https://github.com/quiet-runtime/pulse/releases/download/v1.0.6/pulse-1.0.6-chrome.zip).
+2. Extract it into a folder you will keep on your computer.
+3. Open `chrome://extensions`, turn on **Developer mode**, and choose **Load unpacked**. Select the extracted folder containing `manifest.json`.
+4. Open X after installation. If X was already open, reload that page **outside an active Space**, then enter a Space as a host or speaker.
+5. Start audio in the source tab. In PULSE, press **Share a tab**. Choose the source under **Chrome Tab**, enable **Also share tab audio**, and press **Share**. Choose the source tab rather than the X tab itself.
+6. Unmute in X to send the audio. Enable **Voice** only when you want to speak over it.
+
+**Choose the named extension ZIP.** GitHub's automatic **Source code** archives contain this website repository; they are not an installable PULSE extension.
+
+<details>
+<summary><b>Player controls, updates and troubleshooting</b></summary>
+
+### Player controls
+
+Sharing audio and controlling a website's player are separate functions. Player controls require optional access and a compatible audio or video player.
+
+- **Previous/next** depend on the website's player. Previous may restart the current item; Next can be unavailable.
+- **Seeking** requires a known duration. Live streams cannot be seeked.
+- Some players cannot be controlled, even when their audio can be shared.
+- **Source identification has a fallback:** if Chrome does not identify the captured tab, PULSE detects an audible tab. With several audible tabs, controls can target the wrong one. Pause other audible tabs before sharing; after granting player access for the first time, stop and share again.
+
+### Manual updates
+
+Download the new version and replace the files in your existing extracted folder. Reload PULSE in `chrome://extensions`, then refresh X when you are outside an active Space. This unpacked installation does not provide Chrome Web Store automatic updates.
+
+### If something does not work
+
+- **No tab audio:** check **Also share tab audio** in Chrome's picker, source playback, PULSE's level and M, and your mute state in X.
+- **No strip:** confirm PULSE is enabled and the X page was opened or refreshed after installation. The toolbar button shows or hides the panel.
+- **Player buttons do not work:** check optional site access and whether the website exposes a compatible player.
+- **Still stuck:** [open an issue](https://github.com/quiet-runtime/pulse/issues) with your operating system, Chrome version, source website and what happened.
+
+</details>
+
+> **Player-control limitation:** when the captured tab cannot be identified, controls may select another audible tab. Pause other audible tabs before sharing. This fallback does not change which tab Chrome captures.
+
+## Permissions and privacy
+
+| Access | Purpose |
+| --- | --- |
+| Local extension storage | Remembers the tab level, Width setting and panel position on this device. |
+| Content scripts on **x.com** and **twitter.com** | Shows the strip and connects tab audio to the Space's existing browser audio connection. |
+| Optional **scripting** and **all-sites access** | Lets player controls reach a source on any website and helps identify the shared tab. Chrome requests this when you first use those controls or M. |
+| Chrome's sharing picker | Lets you choose the tab for each share. |
+
+The optional player permission is broader than access to one selected tab. You may decline it and still share audio; PULSE then cannot operate the source player.
+
+PULSE has no developer-operated audio server, analytics or separate account. It does not record your audio. Shared audio travels through **X's existing Space connection**, so X's policies apply.
+
+[Read the PULSE privacy policy](PRIVACY.md) · [Report a problem](https://github.com/quiet-runtime/pulse/issues)
 
 ---
 
-## PULSE
+## Choose your setup
 
-**Share a tab's audio into your Space, in stereo.** That is the whole job, so PULSE stays one strip.
-
-<img align="right" width="240" src="img/pulse-strip.png" alt="The PULSE strip: Your voice is off, the time bar, the meter and fader, previous, pause and next keys, mute, the stereo Width knob and Stop, in clear glass.">
-
-- **Share a tab.** Chrome's own picker asks which tab, and the audio joins the connection X already opened for your Space.
-- **Run its player.** Previous, play, pause, next and a time bar, right on the strip.
-- **Ride the level.** The fader sets the tab's volume; the meter shows the signal as it leaves the fader.
-- **Open up the stereo.** The Width knob runs from mono at −100 to wider at +100, and is off at 0.
-- **Mute with one key.** M takes the tab off the air and mutes it in the tab too.
-- **Your microphone stays out.** Only the tab goes out, until you press the Voice key to talk over it.
-- **Know when you're live.** On air shows only once the audio is really leaving your browser. Stop gives X its microphone back.
-
-### Get started
-
-1. Download the zip from [Releases](../../releases/latest) and unzip it.
-2. In Chrome, open `chrome://extensions`, turn on Developer mode and choose **Load unpacked**.
-3. Go on stage in a Space as a host or speaker. The strip appears at the bottom left.
-4. Press **Share a tab** and choose the tab in Chrome's picker.
-
-Unmute in X to go on air. A mute in X, yours or a host's, silences everything you send, tab included. PULSE sends full-band stereo; what each listener's X app plays is up to X.
-
----
+| | **PULSE** | **PULSATE** | **PULSAR** |
+| --- | --- | --- | --- |
+| **Purpose** | One tab, one compact strip | Several sources in a browser mixer | A desktop console and Room view |
+| **Runs in** | Desktop Chrome | Chrome | Windows first; macOS planned |
+| **Controls** | Level, Width, Voice and compatible player controls | Channel processing, a built-in player and MIDI control | Turntables, channel processing, effects racks, MIDI and Space records |
+| **Availability** | **[Download 1.0.6](https://github.com/quiet-runtime/pulse/releases/tag/v1.0.6)** | **In development** | **In development** |
 
 ## PULSATE
 
-**A multichannel mixer for X Spaces, built into Chrome.** PULSE carries one tab. PULSATE mixes several sources at once, each on a channel strip of its own, into one stereo signal for your Space.
+**More sources, with a channel strip for each.**
 
-<table>
-<tr><td width="26%"><b>Channel strips</b></td><td>Trim, compressor, 4-band EQ, filter and an effects send on every strip, with mute, solo and duck.</td></tr>
-<tr><td><b>Built-in player</b></td><td>Queue your own tracks and play them without opening another tab. Previous, play and next sit on the player's strip, and the music ducks while you speak.</td></tr>
-<tr><td><b>Comfort features</b></td><td>Colour themes and interface scale, meters on every strip with a loudness target, and MIDI control of the knobs.</td></tr>
-</table>
+PULSATE is a separate Chrome mixer in development. Its design brings several sources into one stereo mix for a Space, with trim, compression, EQ, filtering, effects sends, mute, solo and ducking.
 
-PULSATE is in development. It is a separate build from PULSE, and its details may change before release.
-
----
-
-<p align="center"><img src="img/pulsar-icon.png" width="96" height="96" alt=""></p>
+A built-in player, loudness controls, MIDI mapping, themes and interface scaling are part of the development build. Features may change before release. **PULSATE is not included in the PULSE download.**
 
 ## PULSAR
 
-**PULSE is one channel. PULSAR is the whole console.** A desktop app for Windows and macOS with its own view of your Space, two turntables, a full channel section on every strip, racks of effects and MIDI control.
+<p align="center">
+<img src="img/readme/pulsar-preview-v1.jpg" width="1200" alt="PULSAR — The full console. In development.">
+</p>
 
-<p align="center"><img src="img/pulsar-desk.jpg" alt="PULSAR's Mixer: Voice, two Feeds, Player, Master and Room strips with channel knobs, above two turntables with platters, hot cues and waveforms."><br>
-<sub>PULSAR's Studio in a test build, two test tracks in sync.</sub></p>
+**A desktop console for shaping the sound of your Space.**
+
+PULSAR is in development for **Windows first**, with **macOS planned**. It brings a Room view, two turntables, multiple Feeds, channel processing, effects racks and MIDI control into one app. It is a separate product and is not included in the PULSE download.
+
+<p align="center">
+<img src="img/pulsar-desk.jpg" width="1100" alt="PULSAR development build: the Mixer above two turntables with waveforms, platters and cue controls."><br>
+<sub>Actual PULSAR interface from a development build, with sample tracks. Features and appearance may change.</sub>
+</p>
+
+| **Mix and perform** | **Shape and control** |
+| --- | --- |
+| Two turntables, waveforms, cue points, loops, beat jump, sync, key shift and a crossfader. | Channel EQ, compression, filters and sends, with processor racks and ready-made presets. |
+| Sources include files, audio devices, web pages and supported desktop applications. App capture currently requires Windows 11. | MIDI learn, multiple controllers, soft takeover, feedback and mappings you can export and import. |
+| A Room view for the stage and speaking requests. | Themes, interface scaling and reduced motion, plus recording controls and Space session records. |
+
+The website files in this repository include a browser demonstration of PULSAR's Studio and audio engine. Its sample music, voices and Room are demonstrations; it does not demonstrate a connection to a live X Space.
+
+<details>
+<summary><b>Explore the PULSAR development gallery</b></summary>
 
 ### The channel section
 
-<p align="center"><img src="img/pulsar-channel.jpg" alt="PULSAR's Mixer: Voice, Feed A, Feed B, Player, Master and Room strips, each with trim, compressor, four EQ bands, filter and send, under the shared effects bar."></p>
+<img src="img/pulsar-channel.jpg" width="1100" alt="PULSAR channel strips with trim, compression, EQ, filters and effects sends.">
 
-Every strip has trim, a compressor, a 4-band EQ or a 3-band isolator, a filter or colour effect, and a send to the shared effects: a filter with resonance, a colour effect such as Air, and a reverb with its own return. Voice adds CRUSH, WARBLE and ECHO of its own. Master holds the ceiling and a true-peak limiter, and Room is for monitoring only, never sent. Mute, solo and duck sit on every strip, with tap tempo and a crossfader between the two Feeds. Voice is solo-safe by default, so soloing music never takes you off the air.
+The channel section offers a 4-band EQ or 3-band isolator, compression, filtering or colour effects, and a send to shared effects. Voice has additional effects of its own. Room is for monitoring, rather than part of the outgoing mix.
 
-### Your Room and two turntables
+### Room and turntables
 
 <table>
 <tr>
-<td width="50%"><img src="img/pulsar-room.jpg" alt="PULSAR's Room view beside the Mixer: the host, the speakers and listeners, and a private note on a listener."></td>
-<td width="50%"><img src="img/pulsar-turntables.jpg" alt="PULSAR's two turntables under the Mixer, with platters, hot cues and waveforms."></td>
-</tr>
-<tr>
-<td><b>Your own Room view.</b> Sign in on X's own page, inside the app. Create and schedule Spaces, see the stage, handle requests to speak, and react.</td>
-<td><b>Turntables that perform.</b> Three-band waveforms, CUE, eight hot cues, loops, beat jump, tempo that keeps the key, key shift, beat sync, jog and a crossfader.</td>
+<td width="50%"><img src="img/pulsar-room.jpg" alt="PULSAR Room view beside the Mixer, showing the stage and listeners."></td>
+<td width="50%"><img src="img/pulsar-turntables.jpg" alt="PULSAR's two turntables with platters, cue controls and waveforms."></td>
 </tr>
 </table>
 
-### Racks of effects
+### Racks and presets
 
-<p align="center"><img src="img/pulsar-presets.jpg" alt="Presets for talking over music: Duck under Voice, Carve room for Voice, Multiband duck, Mid-side duck, Low-quality track rescue, Clarity and Music leveler."></p>
+<img src="img/pulsar-presets.jpg" width="1100" alt="PULSAR presets for ducking music under voice, shaping tone and levelling music.">
 
-<p align="center"><img src="img/pulsar-racks.jpg" alt="PULSAR's processors, grouped as tone, dynamics, under voice, colour and width, motion and pitch, and space."></p>
+<img src="img/pulsar-racks.jpg" width="1100" alt="PULSAR rack processor selection, grouped by processing purpose.">
 
-A rack on any strip chains processors in any order. They are grouped the way a chain runs: repair and level, tone, dynamics, under voice, colour and width, motion and pitch, space and output, then echoes, filters and lo-fi. Ready-made presets cover what a Space needs. Music can duck or carve room for your voice, a low-quality track can be rescued, and there is sound design such as Club punch, Ambient wash, Ping-pong under Voice and Quarter-note wobble.
+Build chains on individual strips, or start with presets for voice, music and Master. The development build also includes local beat, key and song-section analysis.
 
-### MIDI on the controls
+### MIDI and appearance
 
-<p align="center"><img src="img/pulsar-midi.jpg" alt="PULSAR in MIDI learn: every mappable control outlined, with CC numbers on the Voice and Feed A faders."></p>
+<table>
+<tr>
+<td width="50%"><img src="img/pulsar-midi.jpg" alt="PULSAR MIDI learn with mappable controls and assigned controller numbers."></td>
+<td width="50%"><img src="img/pulsar-appearance.jpg" alt="PULSAR appearance settings for materials, colour schemes, scale and motion."></td>
+</tr>
+</table>
 
-Click a control, then move one on your controller. Several controllers can work at once, with pickup (soft takeover), feedback, and mappings you can export and import.
+### Space records
 
-### Your look
+<img src="img/pulsar-record.jpg" width="1100" alt="PULSAR session record with network statistics, levels, audience and event history.">
 
-<p align="center"><img src="img/pulsar-appearance.jpg" alt="PULSAR's Appearance settings: five materials and eight colour schemes, with scale and motion."></p>
+Session records bring together available network statistics, loudness, audience history and time per role. Recording controls are part of PULSAR; **PULSE does not record audio**.
 
-Five window materials, from solid to Liquid Glass and Windows' own Mica. Eight colour schemes, including true black for OLED screens and high contrast. Interface scale from 90 to 125 %, and reduced motion.
+</details>
 
-### A record of every Space
+**Follow development:** use **Watch → Custom → Releases** on this repository for release notifications.
 
-<p align="center"><img src="img/pulsar-record.jpg" alt="A Space record: recordings, bitrate sent, network to X's server, loss, app load, loudness and peak, strip levels, audience, time per role and events."></p>
+---
 
-After each Space: bitrate, round trip and jitter to X's server, loss, loudness and true peak, the audience over time and your time per role. REC keeps what you heard and what you sent.
+## Audio engineering
 
-- **Any source, isolated.** A desktop app, an audio device, a web page, YouTube or a local file, each on one of six Feeds, with crosstalk held to −100 dBFS.
-- **It reads the music.** Beat This! beat grids, downbeats, S-KEY musical key and song sections, worked out on your own machine.
-- **Clean at full scale.** An 826-run audit of the channel section at 0 dBFS found every path at or under 0.0 dBFS.
+| Area | What it means |
+| --- | --- |
+| **PULSE's audio path** | Stereo audio is processed at a 48 kHz working rate in 32-bit float, without an additional lossy encoding step before X's encoder. |
+| **Default Opus profile** | Stereo is requested, with a maximum average bitrate of 128 kbps, variable bitrate and DTX disabled. Actual transmission depends on negotiation and conditions. |
+| **Master ceiling** | The default Master uses a stereo-linked **sample-peak** ceiling limiter. |
+| **PULSAR's metering and rack limiter** | Loudness metering follows ITU-R BS.1770-4 / EBU R128. True-peak measurement and the separate true-peak rack limiter use 8× oversampling. |
+| **Transmission status** | On air reflects browser-side sending activity. The stereo label reflects negotiated parameters and local track settings; it is not confirmation of every listener's playback. |
 
-**Want it first?** Press **Watch** on this repository and choose **Custom → Releases**.
+X controls the delivery path after the browser. No fixed listener latency, bitrate or stereo playback is guaranteed here. Controlled loopback results and browser-side status should be read separately from live delivery through X.
 
-## Engineering, in brief
+## Licence and support
 
-- **Transmit:** Opus (RFC 7587), 48 kHz stereo, 128 kbps by default, `usedtx=0`, `cbr=0`. Only the Opus `fmtp` line changes, and only on connections that send audio.
-- **No lossy hop** before X's encoder. Sources are mixed at 48 kHz in 32-bit float and cross between contexts on the audio threads.
-- **Loudness:** ITU-R BS.1770-4 and EBU R128. **Limiter:** true peak at 8× oversampling.
-- **Claims come from measurements:** On air, stereo and bitrate are read from the sender's own statistics, and quality is measured at the receiving side of a loopback peer.
+**PULSE is free to use under its proprietary licence.** It is not open-source software. The download contains `LICENSE.txt` and `THIRD_PARTY_NOTICES.txt`; third-party components keep their own licences.
 
-## Privacy and licence
+The text, images and code in this repository are covered by [the repository licence](LICENSE.md). The three wide promotional banners are AI-generated brand artwork; interface screenshots are shown separately.
 
-PULSE has no servers, no accounts and no analytics, and records nothing. It stores its settings and runs on x.com and twitter.com; the player keys and M ask once for access to the tab you share. Read the [privacy policy](PRIVACY.md).
-
-PULSE is free to use. Its code is not open source: the licence in the download lets you install and use it, not copy, change or redistribute it. The libraries inside it keep their own licences, listed in its third-party notices. This repository's content is covered by its [licence](LICENSE.md).
+[Download PULSE](https://github.com/quiet-runtime/pulse/releases/tag/v1.0.6) · [Get help or report a problem](https://github.com/quiet-runtime/pulse/issues) · [PULSE privacy policy](PRIVACY.md)
 
 PULSE, PULSATE and PULSAR are independent products. Not affiliated with or endorsed by X Corp.

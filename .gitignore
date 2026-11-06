@@ -1,0 +1,6 @@
+# The browser demo is maintained and hosted separately.
+/index.html
+/assets/
+/audio/
+/worklets/
+/.nojekyll

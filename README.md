@@ -43,7 +43,7 @@ A normal Stop with Voice off mutes X before restoring its microphone. A crash or
 6. Press **Share a tab** in PULSE. Select the source under **Chrome Tab**, enable **Also share tab audio**, and press **Share**.
 7. Unmute in X. Enable **Voice** if you want to speak over the tab audio.
 
-Use the named extension ZIP. GitHub's automatic Source code archives contain the website files and cannot be loaded as a Chrome extension.
+Use the named extension ZIP. GitHub's automatic Source code archives are not installable Chrome extensions.
 
 Updates are manual: replace the extracted files with the new version, reload PULSE in `chrome://extensions`, then refresh X outside an active Space.
 
@@ -102,32 +102,11 @@ PULSAR is a desktop app in development, with Windows first and macOS planned. It
 
 </details>
 
-## Browser demo
-
-This repository contains a static demo of PULSAR's mixer, turntables and effects. It uses sample tracks, recorded sample voices and a simulated Space. It does not sign in to X or broadcast to a live Space. Desktop-only functions, including application capture, MIDI and recording, are unavailable in the demo.
-
-To run it locally, serve this repository's root with a static HTTP server. For example, with Python installed:
-
-```powershell
-python -m http.server 8799 --bind 127.0.0.1
-```
-
-Open [http://127.0.0.1:8799/](http://127.0.0.1:8799/) in desktop Chrome. The local Opus preview sends audio between two WebRTC connections in the same page.
-
-## Audio details
-
-- Working format: 48 kHz stereo, 32-bit float.
-- Default Opus request: stereo, maximum average bitrate 128 kbps, variable bitrate, DTX disabled.
-- Default Master ceiling: a stereo-linked sample-peak limiter.
-- PULSAR has separate loudness and true-peak metering, and a true-peak rack limiter using 8× oversampling.
-
-These settings describe the browser's processing and requested encoding. They do not establish listener latency or playback quality through X.
-
 ## Support and terms
 
 Report problems through [GitHub Issues](https://github.com/quiet-runtime/pulse/issues). Include your operating system, Chrome version, source website and the steps that produced the problem.
 
-[Repository licence](LICENSE.md) · [Website dependency notices](THIRD_PARTY_NOTICES.txt) · [Privacy](PRIVACY.md)
+[Repository licence](LICENSE.md) · [Privacy](PRIVACY.md)
 
 The extension ZIP contains its usage terms in `LICENSE.txt` and dependency notices in `THIRD_PARTY_NOTICES.txt`.
 

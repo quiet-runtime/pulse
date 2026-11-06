@@ -1,6 +1,6 @@
 # PULSE privacy
 
-Applies to PULSE 1.0.6. Updated 5 November 2026.
+Applies to PULSE 1.0.6. Updated 6 November 2026.
 
 ## Purpose
 
@@ -29,10 +29,6 @@ PULSE has no analytics or advertising endpoint and does not send audio, browsing
 ## Stopping
 
 Stop ends the capture and restores X's microphone connection. A normal Stop with Voice off mutes X first. Crash or connection-stall recovery can return to X's normal microphone behavior.
-
-## Browser demo
-
-The website's PULSAR demo uses sample tracks, recorded sample voices and a simulated Space. It processes audio in the browser and can run an Opus loopback within the page. It does not sign in to X or broadcast to a live Space. Website assets are requested from the host serving the page; the host's normal request handling may apply.
 
 ## Support
 

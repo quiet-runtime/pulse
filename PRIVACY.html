@@ -9,9 +9,9 @@
 <style>body{margin:0;background:#080b12;color:#e5e8f0;font:16px/1.65 system-ui,sans-serif}main{width:min(760px,calc(100vw - 40px));margin:0 auto;padding:40px 0 72px}h1,h2{line-height:1.25}h2{margin-top:30px;font-size:1.2rem}a{color:#b0ceff}footer{margin-top:40px;border-top:1px solid #3b4350;padding-top:18px}</style>
 </head>
 <body><main>
-<a href="./">PULSE</a>
+<a href="https://github.com/quiet-runtime/pulse">PULSE</a>
 <h1>PULSE privacy</h1>
-<p>Applies to PULSE 1.0.6. Updated 5 November 2026.</p>
+<p>Applies to PULSE 1.0.6. Updated 6 November 2026.</p>
 <section><h2>Purpose</h2><p>PULSE shares one browser tab's audio into an X Space where you are a host or speaker. An X account is required; PULSE has no separate account.</p></section>
 <section><h2>Access to X pages</h2><p>PULSE runs on x.com and twitter.com to display its panel, determine the Space and your stage/mute state, and connect shared audio to X's existing browser audio connection.</p></section>
 <section><h2>Audio</h2><p>Chrome asks you to choose a source tab for each share. PULSE uses its audio track and stops the capture's video track. Your microphone is excluded from the shared mix until you enable Voice. Audio is sent through X's existing Space connection, not to a developer-operated audio server. PULSE does not record it. X's policies and any recording by X or other participants apply once audio is shared.</p></section>
@@ -19,7 +19,6 @@
 <section><h2>Local settings</h2><p>PULSE stores the tab level, Width setting and panel position in extension storage on this device. Uninstalling the extension removes those settings.</p></section>
 <section><h2>Developer data collection</h2><p>PULSE has no analytics or advertising endpoint and does not send audio, browsing history or telemetry to the developer. Audio shared into a Space still travels through X.</p></section>
 <section><h2>Stopping</h2><p>Stop ends the capture and restores X's microphone connection. A normal Stop with Voice off mutes X first. Crash or connection-stall recovery can return to X's normal microphone behavior.</p></section>
-<section><h2>Browser demo</h2><p>The website's PULSAR demo uses sample tracks, recorded sample voices and a simulated Space. It processes audio in the browser and can run an Opus loopback within the page. It does not sign in to X or broadcast to a live Space. Website assets are requested from the host serving the page; the host's normal request handling may apply.</p></section>
 <section><h2>Support</h2><p>For questions or problems, <a href="https://github.com/quiet-runtime/pulse/issues">open a GitHub issue</a>.</p></section>
-<footer><a href="https://github.com/quiet-runtime/pulse/issues">Support</a> · <a href="LICENSE.md">Licence</a> · <a href="THIRD_PARTY_NOTICES.txt">Third-party notices</a></footer>
+<footer><a href="https://github.com/quiet-runtime/pulse/issues">Support</a> · <a href="LICENSE.md">Licence</a></footer>
 </main></body></html>

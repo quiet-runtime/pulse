@@ -50,7 +50,7 @@ Updates are manual: replace the extracted files with the new version, reload PUL
 ## Limitations
 
 - **Player selection:** when Chrome does not identify the captured tab, player controls fall back to detecting an audible tab. With several audible tabs, controls can target the wrong one. Pause other audible tabs before sharing. After first granting player access, stop and share again.
-- **Website compatibility:** some players cannot be controlled. Previous may restart the current item, Next may be unavailable, and live streams cannot be seeked.
+- **Website compatibility:** some players cannot be controlled. Previous may restart the current item, Next may be unavailable, and seeking is unavailable for live streams.
 - **Delivery:** PULSE supports stereo transmission, but X and the listener's app determine what reaches the listener. A displayed bitrate is not a fixed delivery guarantee.
 - **Compatibility:** this package targets desktop Chrome. X or browser changes can affect operation.
 
